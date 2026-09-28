@@ -4,7 +4,9 @@ import type {
   GreenApiNotification,
 } from '../types'
 
-const API_BASE = '/green-api'
+// In dev Vite proxies /green-api → api.green-api.com (CORS bypass).
+// On GitHub Pages there is no proxy, so call the API host directly.
+const API_BASE = import.meta.env.DEV ? '/green-api' : 'https://api.green-api.com'
 
 function instancePath(
   credentials: Credentials,

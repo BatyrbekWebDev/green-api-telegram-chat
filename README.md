@@ -33,7 +33,13 @@ npm run build
 npm run preview
 ```
 
-> Для production-деплоя нужен аналогичный reverse-proxy на `/green-api` или CORS на стороне API.
+## Demo (GitHub Pages)
+
+После пуша в `main` GitHub Actions публикует сборку на:
+
+**https://batyrbekwebdev.github.io/green-api-telegram-chat/**
+
+Локально Vite проксирует `/green-api` (обход CORS). На Pages запросы идут напрямую на `https://api.green-api.com`.
 
 ## Настройка GREEN-API (Telegram)
 
